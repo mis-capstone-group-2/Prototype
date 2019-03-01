@@ -1,0 +1,35 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <style type="text/css">
+        body{background-color: gray}
+        #wrapper{width:600px; height:500px; background-color:white; margin:auto; border:solid;}
+        #leftcolumn{width:291px; height:100%; float:left; border-right:solid;}
+        .labels{color:red;}
+    </style>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id ="wrapper">
+        <div id ="leftcolumn">
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+            </asp:ContentPlaceHolder>
+        </div>
+        <div id="rightcolumn">
+            <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">
+        
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

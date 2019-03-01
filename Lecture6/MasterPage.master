@@ -1,0 +1,76 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <style type="text/css">
+
+        body{background-color:silver;}
+
+        #wrapper{width:800px; height:600px; background-color:white; border:solid; margin-top:20px; margin-left:auto; margin-right:auto; font-family:"Times New Roman" sans-serif; border-radius:20px}
+
+        #header{height: 100px; border-bottom:solid 3px;}
+
+        #main{height:350px; border-bottom:solid 3px; overflow:auto; padding-right:10px;}
+
+        #content{width:70%; float:right;}
+
+        #nav{width: 25%; height:100%; border-right:solid 3px;}
+
+        #footer{padding-top:5px; text-align:center; font-weight:bold; font-size:16px;}
+
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+     <div id="wrapper">
+        <div id="header">
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                <h1 style="text-align:center; font-family:"Monotype Corsiva";">Media Mall</h1>
+                <div style="position:relative; left:620px">
+                    <asp:LoginView ID="LoginView1" runat="server">
+                        <AnonymousTemplate>
+                            <a runat="server" style="text-decoration:none; font-style:italic; color:black; font-weight:bold; font-size:18px;" href="~/Account/Register.aspx">Register</a>
+                            &nbsp; &nbsp; &nbsp;
+                            <a runat="server" style="text-decoration:none; font-style:italic; color:black; font-weight:bold; font-size:18px;" href="~/Account/Login.aspx">Log in</a>
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/Default.aspx" OnLoggingOut="Unnamed_LoggingOut"/>
+                        </LoggedInTemplate>
+                    </asp:LoginView>
+                </div>
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <div id="main">
+            <div id="content">
+                <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">
+        
+                </asp:ContentPlaceHolder>
+            </div>
+
+            <div id="nav">
+                <asp:ContentPlaceHolder id="ContentPlaceHolder3" runat="server">
+        
+                    <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1">
+                    </asp:TreeView>
+                    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+        
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        
+        <div id="footer">
+            <asp:ContentPlaceHolder id="ContentPlaceHolder4" runat="server">
+        
+                <p>Media Mall<br />123 Main Street <br />Glassboro, NJ 08028 </p>
+        
+            </asp:ContentPlaceHolder>
+        </div>
+
+    </div>
+    </form>
+</body>
+</html>

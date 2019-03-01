@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+
+
+
+  <siteMapNode url="~/menuExample1.aspx" title="Home"  description="the home page for this example">
+
+
+
+    <siteMapNode title="Fiction" description="Fiction">
+
+      <siteMapNode url="~/fictChild.aspx" title="children"  description="Fiction for children" />
+
+      <siteMapNode url="~/fictTeen.aspx" title="teen"  description="Fiction for teens" />
+
+      <siteMapNode url="~/fictAdult.aspx" title="adult"  description="Fiction for mature readers" />
+
+    </siteMapNode>
+
+
+
+    <siteMapNode title="Non-Fiction" description="Non-Fiction">
+
+      <siteMapNode url="~/nFictChild.aspx" title="children"  description="Non-fiction for children" />
+
+      <siteMapNode url="~/nFictTeen.aspx" title="teen"  description="Non-fiction for teens" />
+
+      <siteMapNode url="~/nFictAdult.aspx" title="adult"  description="Non-fiction for mature readers" />
+
+    </siteMapNode>
+
+
+
+  </siteMapNode>
+
+</siteMap>

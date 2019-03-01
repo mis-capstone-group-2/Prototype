@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="Default.aspx" title="Home"  description="Home Page">
+    <siteMapNode title="Products">
+      <siteMapNode url="Books.aspx" title="Books"  description="Browse our Books"/>
+      <siteMapNode url="Movies.aspx" title="Movies"  description="Browse our Movies"/>
+    </siteMapNode>
+      <siteMapNode url="~/Restricted/Members.aspx" title="Members Only" description="Restricted Access for Members" />
+    </siteMapNode>
+</siteMap>

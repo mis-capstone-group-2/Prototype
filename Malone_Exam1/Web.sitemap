@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="~/Default.aspx" title="Home"  description="The home page for different seasons">
+
+      <siteMapNode title="Calendar Themes"  description="Calendar Themes">
+        <siteMapNode url="~/Summer.aspx" title="Summer" description="Summer" />
+        <siteMapNode url="~/Fall.aspx" title="Fall" description="Fall" />
+        <siteMapNode url="~/Winter.aspx" title="Winter" description="Winter" />
+        <siteMapNode url="~/Spring.aspx" title="Spring" description="Spring" />
+      </siteMapNode>
+      
+    </siteMapNode>
+</siteMap>
